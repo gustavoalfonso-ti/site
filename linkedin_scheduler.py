@@ -10,7 +10,6 @@ import json
 import time
 import logging
 from typing import List, Dict
-from datetime import datetime
 from linkedin_agent import LinkedInAgent
 
 

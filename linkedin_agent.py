@@ -9,7 +9,6 @@ This agent allows automating the publication of updates on LinkedIn.
 import os
 import json
 import logging
-from datetime import datetime
 from typing import Dict, Optional
 import requests
 
@@ -117,7 +116,7 @@ class LinkedInAgent:
             return result
         except requests.exceptions.RequestException as e:
             self.logger.error(f"Erro ao criar publicação: {e}")
-            if hasattr(e.response, 'text'):
+            if hasattr(e, 'response') and e.response and hasattr(e.response, 'text'):
                 self.logger.error(f"Detalhes do erro: {e.response.text}")
             raise
     
@@ -182,7 +181,7 @@ class LinkedInAgent:
             return result
         except requests.exceptions.RequestException as e:
             self.logger.error(f"Erro ao criar publicação com link: {e}")
-            if hasattr(e.response, 'text'):
+            if hasattr(e, 'response') and e.response and hasattr(e.response, 'text'):
                 self.logger.error(f"Detalhes do erro: {e.response.text}")
             raise
 
