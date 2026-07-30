@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "text": "Olá LinkedIn! Este é um post automatizado usando o LinkedIn Update Agent. 🚀",
+      "visibility": "PUBLIC"
+    },
+    {
+      "text": "Confira este artigo interessante sobre automação!",
+      "link_url": "https://example.com/article",
+      "link_title": "Automação com LinkedIn API",
+      "link_description": "Aprenda a automatizar suas publicações no LinkedIn",
+      "visibility": "PUBLIC"
+    }
+  ]
+}
